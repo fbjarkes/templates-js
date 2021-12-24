@@ -8,6 +8,7 @@ const main = async () => {
 	const { parsed: cfg } = dotenv.config({ path: `${__dirname}/.env` });
     logger.info(`Verbose: ${argv.verbose}`);
 	logger.info(`Using config ${JSON.stringify(cfg)}`)
+    const a = "foo";
 };
 
 main();
