@@ -19,18 +19,12 @@
   "scripts": {
     "lint": "eslint **/*.js --fix",
     "test": "mocha **/*.test.js",
-    "nuke": "rm -rf node_modules package-lock.json yarn.lock"
+    "nuke": "rm -rf node_modules package-lock.json yarn.lock",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "**/*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged",
-      "pre-push": "yarn test"
-    }
   }
 }
